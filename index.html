@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Головай Гліб">
+    <title>Мій список цілей</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Мій список цілей 🎯</h1>
+        
+        <form id="goal-form">
+            <div class="input-group">
+                <input type="text" id="goal-input" placeholder="Що плануєте зробити?">
+                <button type="submit">Додати</button>
+            </div>
+            <span id="error-message" class="error" hidden>Текст має містити від 3 до 100 символів</span>
+        </form>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Усі</button>
+            <button class="filter-btn" data-filter="active">Активні</button>
+            <button class="filter-btn" data-filter="completed">Виконані</button>
+        </div>
+
+        <p id="empty-message">Поки що цілей немає</p>
+        
+        <ul id="goal-list"></ul>
+
+        <div class="counter">
+            Усього: <span id="total-count">0</span>. Виконано: <span id="completed-count">0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
